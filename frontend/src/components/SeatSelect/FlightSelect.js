@@ -12,7 +12,6 @@ const FlightSelect = ({ handleFlightSelect }) => {
       .then((res) => res.json())
       .then(({ data }) => {
         const flights = Object.keys(data);
-        // console.log(flights);
         setFlights(flights);
       });
   }, []);
@@ -25,6 +24,7 @@ const FlightSelect = ({ handleFlightSelect }) => {
         <option selected disabled value="">
           Select a Flight
         </option>
+        {/* map over the flights and render an option for each flight */}
         {flights.map((flight) => {
           return <option value={flight}>{flight}</option>;
         })}

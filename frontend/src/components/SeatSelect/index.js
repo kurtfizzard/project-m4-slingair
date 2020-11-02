@@ -59,7 +59,7 @@ const SeatSelect = ({ setReservationId }) => {
         },
       })
         .then((res) => res.json())
-        // deconstruct the result into the variables that we need
+        // deconstruct the result into the elements that we need
         .then(({ data, message, status }) => {
           if (status === 201) {
             console.log(message);
@@ -69,9 +69,11 @@ const SeatSelect = ({ setReservationId }) => {
             setReservationId(data.id);
             // TODO: if 201, redirect to /confirmed (push)
             history.push("/confirmed");
+            setSubStatus("confirmed");
           } else {
             // TODO: if error from server, show error to user (stretch goal)
             console.log(status, message, data);
+            setSubStatus("error");
           }
         });
     }

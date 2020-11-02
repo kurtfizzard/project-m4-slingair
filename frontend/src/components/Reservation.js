@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import GlobalStyles, { themeVars } from "./GlobalStyles";
+import { themeVars } from "./GlobalStyles";
 
 const Reservation = ({ userReservation, setUserReservation }) => {
   const [reservationId, setReservationId] = useState("");

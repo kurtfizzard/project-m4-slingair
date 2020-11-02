@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { themeVars } from "./GlobalStyles";
 
 const Confirmation = ({ userReservation }) => {
   const { id, flight, seat, givenName, surname, email } = userReservation;
@@ -35,21 +36,23 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
-  border: 2px solid red;
+  border: 2px solid ${themeVars.alabamaCrimson};
   border-radius: 5px;
   padding: 20px;
-  width: 40%;
 `;
 
 const Notice = styled.p`
-  color: red;
-  border-bottom: 2px solid red;
-  font-size: 20px;
+  color: ${themeVars.alabamaCrimson};
+  /* border-bottom: 2px solid ${themeVars.alabamaCrimson}; */
+  font-family: ${themeVars.headingFont};
+  font-size: 40px;
   font-weight: bold;
   padding: 10px;
+  text-align: center;
 `;
 
 const CustomerInformation = styled.p`
+  font-size: 20px;
   margin-top: 10px;
 `;
 
